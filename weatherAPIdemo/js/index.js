@@ -1,4 +1,4 @@
-var feedURL = "https://www.metaweather.com/api/location/search/?query=new%20york";
+var feedURL = "https://www.metaweather.com/api/location/30079/";
 
 $(document).on('pagecreate', '#feedPage', function(event) {
 	
