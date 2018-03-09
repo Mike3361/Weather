@@ -5,7 +5,12 @@ $(document).on('pagecreate', '#feedPage', function(event) {
 	
 	// Use an HTML GET request to obtain data from an API
 	var xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("GET", "ajax_info.txt", true);
+    xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+};
+	xmlhttp.open("GET", feedURL, true);
 	xmlhttp.send();
 		
 		
